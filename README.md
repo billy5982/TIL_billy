@@ -20,6 +20,7 @@
 ## 자료구조 알고리즘
 
 - [자료구조 알고리즘 정리(스택,큐,트리,그래프) 2022/09/21~2022/09/22](https://github.com/billy5982/TIL_billy/blob/main/src/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%20%EA%B8%B0%EC%B4%88.md)
+- [추가 공부 중인 알고리즘 강의 (유데미)](https://github.com/billy5982/Algorithm-pattern)
 
 ## 회고, 기술면접
 
