@@ -167,3 +167,81 @@ export default function App(){
     )
 }
 ```
+
+커스텀 훅 예시
+
+```jsx
+// Input.js
+function Input({ labelText, value }) {
+  return (
+    <div className="name-input">
+      <label>{labelText}</label>
+      <input {...value} type="text" />
+    </div>
+  );
+}
+
+export default Input;
+
+// useInput.js
+import { useState } from "react";
+
+function useInput(initialValue) {
+  const [value, setValue] = useState(initialValue);
+
+  const reset = () => {
+    setValue(initialValue);
+  };
+
+  const bind = {
+    value,
+    onChange: (e) => {
+      setValue(e.target.value);
+    }
+  };
+
+  return [value, bind, reset];
+}
+
+export default useInput;
+
+//App.js
+import { useState } from "react";
+import Input from "./component/Input";
+import "./styles.css";
+import useInput from "./util/useInput";
+
+export default function App() {
+  const [firstValue, firstBind, firstReset] = useInput("");
+  const [secondValue, secondBind, secondReset] = useInput("");
+  const [nameArr, setNameArr] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setNameArr([...nameArr, `${firstValue} ${secondValue}`]);
+    firstReset();
+    secondReset();
+  };
+
+  return (
+    <div className="App">
+      <h1>Name List</h1>
+      <div className="name-form">
+        <form onSubmit={handleSubmit}>
+          <Input labelText={"성"} value={firstBind} />
+          <Input labelText={"이름"} value={secondBind} />
+          <button>제출</button>
+        </form>
+      </div>
+      <div className="name-list-wrap">
+        <div className="name-list">
+          {nameArr.map((el, idx) => {
+            return <p key={idx}>{el}</p>;
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+```
