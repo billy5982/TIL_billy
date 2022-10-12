@@ -160,9 +160,10 @@ jobs:
         run: | # syns => 동기화 하는 S3 메소드, fe-84-billy5982 => 버킷 명
           aws s3 sync \ 
             --region ap-northeast-2 \
-            build s3://fe-84-billy5982 \
+            build s3://fe-84-billy5982 \ 
             --delete
         working-directory: ./my-agora-states-client
+        # cp : 파일이 있는 경우에도 파일을 복사, sync : 업데이트 된 파일만을 복사
 ```
 
 https://byunjuneseok.tistory.com/9?category=974842  
