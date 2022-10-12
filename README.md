@@ -37,6 +37,8 @@
 
 - [AWS 배포](https://github.com/billy5982/TIL_billy/blob/main/src/%EB%B0%B0%ED%8F%AC/%EB%B0%B0%ED%8F%AC.md)
 
+- [CI/CD git Action](https://github.com/billy5982/TIL_billy/blob/main/src/%EB%B0%B0%ED%8F%AC/CI-CD.md)
+
 ## 회고, 기술면접
 
 - [Section3 기술면접 정리](https://github.com/billy5982/TIL_billy/blob/main/src/%EA%B8%B0%EC%88%A0%20%EB%A9%B4%EC%A0%91%2C%ED%9A%8C%EA%B3%A0/Section3.md)
