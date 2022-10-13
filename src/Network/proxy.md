@@ -55,7 +55,7 @@ export async function getfetch() {
 ```jsx
 // React proxy 설정 방법 => webpack dev server에서 설정한 proxy는 전역적인 설정이므로 해당 방법이 적용되지 않는 경우가 종종 발생
 npm install  http-proxy-middleware --save
-
+// 해당라이브러를 사용할 때는 요청에 /api/요청할 곳 작업해야한다. use가 두개 이상일 경우가 존재하기 때문
 // ./src/setupProxy.js
 const {createProxyMiddleware} = require('http-proxy-middleware');
 module.exports =function(app){
